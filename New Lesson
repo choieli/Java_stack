@@ -1,0 +1,31 @@
+package com.eli.firstproject;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+	@RequestMapping("/")
+	public String hello() {
+		return "Hello World";
+	}
+	
+	@RequestMapping("/java")
+	public String java() {
+		return "Running java!";
+	}
+	@RequestMapping("/m/{track}/{module}/{lesson}")
+    public String showLesson(@PathVariable("track") String track, @PathVariable("module") String module, @PathVariable("lesson") String lesson){
+    	return "Track: " + track + ", Module: " + module + ", Lesson: " + lesson;
+    }
+	
+	@RequestMapping("/coding")
+	public String coding() {
+		return "Hello Coding!";
+	}
+	@RequestMapping("/m/{dojo}")
+	public String dojo(@PathVariable("dojo") String dojo) {
+		return "The " + dojo + " is awesome!";
+	}
+}
