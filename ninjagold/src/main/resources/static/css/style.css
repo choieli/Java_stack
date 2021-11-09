@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+#container {
+	width:900px;
+}
+.choice {
+	display: inline-block;
+	text-align: middle;
+	border:solid 1px black;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
